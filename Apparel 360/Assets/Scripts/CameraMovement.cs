@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
     public GameObject target;
 
@@ -21,8 +18,14 @@ public class Rotate : MonoBehaviour
         }else if (Input.GetKey("down"))
         { 
             transform.RotateAround(target.transform.position,Vector3.left, 50*Time.deltaTime); 
+        }else if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            transform.Translate(Vector3.forward*0.3f);
+        }else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            transform.Translate(Vector3.back*0.3f);
         }
-        
+
     }
     
 }
