@@ -6,7 +6,7 @@ public class ButtonSelect : MonoBehaviour
 {
     public GameObject shirtButton;
     public GameObject model;
-    public int buttonCount;
+    public int buttonCount=0;
     public GameObject clone;
     public GameObject[] buttonCollection = new GameObject[8];
     public Button clickedButton;
