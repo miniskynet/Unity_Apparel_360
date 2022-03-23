@@ -15,7 +15,7 @@ public class ARswitch : MonoBehaviour
         prevCanvas.SetActive(false);
         prevCam.SetActive(false);
         humanModel.SetActive(true);
-        shirt.transform.position = new Vector3(0, -138, -80);
+        shirt.transform.position = new Vector3(0, -140, -83);
         shirt.transform.localScale = new Vector3(100, 100, 100);
     }
 

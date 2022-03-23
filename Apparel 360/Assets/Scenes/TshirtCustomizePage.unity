@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 133937303}
   - component: {fileID: 133937302}
   - component: {fileID: 133937301}
+  - component: {fileID: 133937304}
   m_Layer: 5
   m_Name: Go back
   m_TagString: Untagged
@@ -205,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 133937302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 133937304}
+        m_TargetAssemblyTypeName: BackToEditing, Assembly-CSharp
+        m_MethodName: goBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &133937302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +257,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133937299}
   m_CullTransparentMesh: 1
+--- !u!114 &133937304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133937299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6aafc5b7be00e4e9a5a6d4d4136cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prevCanvas: {fileID: 1884050411}
+  prevCam: {fileID: 1255908102}
+  humanModel: {fileID: 835746957}
+  shirt: {fileID: 835746956}
 --- !u!1 &182925024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: eb29806813b4e6440b9071d27caa670f, type: 3}
@@ -1951,7 +1980,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 450}
+  m_SizeDelta: {x: 800, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1242053707
 MonoBehaviour:
