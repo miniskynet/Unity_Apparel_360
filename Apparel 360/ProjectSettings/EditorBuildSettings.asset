@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TshirtCustomizePage.unity
     guid: e9d99e06381322748859efd6a7358de0
+  - enabled: 0
+    path: Assets/Scenes/ARtest.unity
+    guid: dccabbbccbc9d004181744ba65a7fa84
   m_configObjects: {}
