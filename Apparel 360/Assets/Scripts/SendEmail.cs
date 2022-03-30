@@ -1,9 +1,5 @@
 using System;
-using System.Collections;
-using System.Net;
-using System.Net.Mail;
-using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,25 +7,33 @@ public class SendEmail : MonoBehaviour
 {
     public Button submit;
     public GameObject model;
-    public InputField senderEmail;
-    public InputField password;
     public InputField receiver;
-    
+
     private void Start()
     {
         submit.onClick.AddListener(delegate
         {
-            MailMessage mail = new MailMessage();
-            mail.From = new MailAddress(senderEmail.text);
-            mail.To.Add(receiver.text);
-            mail.Subject = "Order on " + DateTime.Now;
-            mail.Body = "button 1 + collar 2";
-            SmtpClient server = new SmtpClient("smtp.gmail.com");
-            server.Port = 587;
-            server.Credentials = new NetworkCredential(senderEmail.text,password.text) as ICredentialsByHost;
-            server.EnableSsl = true;
-            server.Send( mail );
+            string subject = "Order on " + DateTime.Now;
+            int childCount = model.transform.childCount;
+            String[] items = new String[childCount];
+            String body="";
+            for (int i = 0; i < childCount; i++)
+            {
+                items[i] = model.transform.GetChild(i).name;
+            }
+
+            String[] material = model.GetComponent<Renderer>().material.name.Split(' ');
+            body += material[0] + " | ";
+            body += model.GetComponent<Renderer>().material.color + " | ";
+            HashSet<String> newList = new HashSet<String>(items);
+            foreach (String item in newList)
+            {
+                String[] component = item.Split('(');
+                body += component[0] + " | ";
+            }
+            Application.OpenURL("mailto:" + receiver.text + "?subject=" + subject + "&body=" + body);
         });
     }
+
 
 }
