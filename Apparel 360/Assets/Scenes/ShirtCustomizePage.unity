@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shirt: {fileID: 208133413}
-  pattern: {fileID: -876546973899608171, guid: 7bdc3ed42fb4dcd4eabf621cf0effb36, type: 3}
+  pattern: {fileID: 2100000, guid: d2d3715ec1a3b3440be427e754d351b3, type: 2}
 --- !u!114 &197238115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5977,7 +5977,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 6e402969fc1a3174d8c9d5c828b43798, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 7bdc3ed42fb4dcd4eabf621cf0effb36, type: 3}
+      objectReference: {fileID: 2100000, guid: d2d3715ec1a3b3440be427e754d351b3, type: 2}
     - target: {fileID: -4683669308469848369, guid: 6e402969fc1a3174d8c9d5c828b43798, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 

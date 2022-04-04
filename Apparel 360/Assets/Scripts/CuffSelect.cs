@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class CuffSelect : MonoBehaviour
 {
     public GameObject shirtCuff;
@@ -11,13 +9,13 @@ public class CuffSelect : MonoBehaviour
     public int cuffCount;
     public static int count=0;
     public Button clickedButton;
-
-
     public void spawnCuff()
     {
         if(cuffCount==0)
         {
+            //grey out the clicked button
             clickedButton.GetComponent<Image>().color = Color.gray;
+            //retrieve the location of shirt/Tshirt and spawn two collars with changed rotation and position
             Vector3 modelLocation = model.transform.position;
             Material modelMaterial = model.GetComponent<Renderer>().material;
             Vector3 modelLocationFinal1 = new Vector3(modelLocation.x+0.62f, modelLocation.y-0.03f, modelLocation.z+0.03f);
@@ -34,7 +32,9 @@ public class CuffSelect : MonoBehaviour
         }
         else
         {
+            //revert button color to original
             clickedButton.GetComponent<Image>().color = Color.white;
+            //destroy the cuff objects if user deselects button
             Destroy(clone1);
             Destroy(clone2);
             cuffCount--;
