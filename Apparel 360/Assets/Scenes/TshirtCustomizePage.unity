@@ -1016,8 +1016,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   submit: {fileID: 496971495}
   model: {fileID: 0}
-  senderEmail: {fileID: 1633809477}
-  password: {fileID: 831427569}
   receiver: {fileID: 1930010923}
 --- !u!114 &496971495
 MonoBehaviour:
@@ -1537,8 +1535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9d0d534119f2a47b0f5f6b47e3dff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shirt: {fileID: 0}
-  pattern: {fileID: -876546973899608171, guid: 7bdc3ed42fb4dcd4eabf621cf0effb36, type: 3}
+  shirt: {fileID: 182925024}
+  pattern: {fileID: 2100000, guid: d2d3715ec1a3b3440be427e754d351b3, type: 2}
 --- !u!114 &819312804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1846,7 +1844,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: eb29806813b4e6440b9071d27caa670f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 7bdc3ed42fb4dcd4eabf621cf0effb36, type: 3}
+      objectReference: {fileID: 2100000, guid: d2d3715ec1a3b3440be427e754d351b3, type: 2}
     - target: {fileID: -2021178655527167927, guid: eb29806813b4e6440b9071d27caa670f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

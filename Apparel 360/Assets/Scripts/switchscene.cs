@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class switchscene : MonoBehaviour
 {
-    public void switchsc() {
+    public void switchsc() { 
+        //unloads and loads scenes based on users selection
     if (SceneManager.GetActiveScene().name == "ShirtCustomizePage")
     {
         SceneManager.LoadScene("TshirtCustomizePage");
@@ -16,8 +14,5 @@ public class switchscene : MonoBehaviour
         SceneManager.LoadScene("ShirtCustomizePage");
         SceneManager.UnloadScene("TshirtCustomizePage");
     }
-    
-}
-
-
+    }
 }

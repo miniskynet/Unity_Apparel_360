@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BackToEditing : MonoBehaviour
 {
@@ -11,6 +10,7 @@ public class BackToEditing : MonoBehaviour
     
     public void goBack()
     {
+        //reverts the changes made when switching from customize menu to augmented reality 
         prevCanvas.SetActive(true);
         prevCam.SetActive(true);
         humanModel.SetActive(false);
